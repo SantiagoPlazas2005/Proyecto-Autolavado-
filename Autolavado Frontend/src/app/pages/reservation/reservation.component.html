@@ -1,0 +1,16 @@
+<div class="reservation-container">
+    <h1>Hacer una Reservación</h1>
+    <form (submit)="makeReservation()">
+      <label for="service">Seleccionar Servicio</label>
+      <select id="service" [(ngModel)]="selectedService" name="service">
+        <option *ngFor="let service of services" [value]="service">{{ service }}</option>
+      </select>
+  
+      <label for="date">Seleccionar Fecha</label>
+      <input type="date" id="date" [(ngModel)]="date" name="date" required>
+  
+      <button type="submit">Reservar</button>
+    </form>
+    <button (click)="navigateTo('dashboard')">Volver</button>
+  </div>
+  

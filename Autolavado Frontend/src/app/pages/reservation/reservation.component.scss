@@ -1,0 +1,46 @@
+.reservation-container {
+  background: url('/assets/img/lavado-imagen.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    h1 {
+      color: white;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+  
+      label {
+        color: white;
+        margin-top: 10px;
+      }
+  
+      select, input {
+        padding: 8px;
+        margin-top: 5px;
+      }
+  
+      button {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 15px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+  
+    button {
+      background-color: gray;
+      margin-top: 10px;
+    }
+  }
+  

@@ -1,0 +1,25 @@
+.dashboard-container {
+    background: url('/assets/img/lavado-imagen.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    h1 {
+      color: white;
+    }
+  
+    button {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+  
