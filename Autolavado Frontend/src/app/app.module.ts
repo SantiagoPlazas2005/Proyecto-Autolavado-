@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'register-vehicle', component: RegisterVehicleComponent },
   { path: 'reservation', component: ReservationComponent },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' } // Redirección por defecto a home
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -34,9 +35,12 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes) // Rutas configuradas
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    provideHttpClient() // ✅ Nueva implementación
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
